@@ -1,6 +1,7 @@
 package controller;
 
 import model.Employee;
+import model.EmployeeFulltime;
 import model.EmployeeParttime;
 
 import java.util.ArrayList;
@@ -35,5 +36,14 @@ public class CompanyManager {
             parttimeSalary += employee.getMonthlySalary();
         }
         return parttimeSalary;
+    }
+    public ArrayList<Employee> getFulltime() {
+        ArrayList<Employee> fulltime = new ArrayList<>();
+        for (Employee e: listEmployee) {
+            if (e instanceof EmployeeFulltime) {
+                fulltime.add(e);
+            }
+        }
+        return fulltime;
     }
 }

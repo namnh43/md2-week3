@@ -30,6 +30,6 @@ public class Main {
         System.out.println(manager.getAverageSalary());
         //sorted employee
         Collections.sort(manager.listEmployee);
-        System.out.println(manager.listEmployee);
+        System.out.println(manager.getFulltime());
     }
 }
